@@ -29,9 +29,19 @@ fn mut_reference2() {
     let mut word = String::from("hello");
     let word2 = &mut word;
     println!("{}", word2);
-    // cannot use twice mutalbe reference
+
     let word3 = &mut word;
     println!("{}", word3);
+}
+
+fn mut_reference3() {
+    let mut word = String::from("hello");
+    let word3 = &word;
+    let word4 = &word;
+
+    // cannot have mut and immutable refences
+    // let word2 = &mut word;
+    // println!("{} {} {}", word3, word4, word2);
 }
 
 fn clone_example() {
