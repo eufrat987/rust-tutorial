@@ -41,3 +41,8 @@ fn tuple_example() {
 
     println!("{x}, {y}, {z}");
 }
+
+fn arrays() {
+    let aa = [1, 2, 3, 4];
+    let aaa = [3; 5];
+}
