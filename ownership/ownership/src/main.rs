@@ -16,6 +16,13 @@ fn main() {
     mut_reference2();
 }
 
+// cannot create
+// fn dangle() -> &String {
+//     let word = String::from("hello");
+//
+//     &word
+// }
+
 fn mut_reference() {
     let mut word = String::from("hello");
     let word2 = &mut word;
