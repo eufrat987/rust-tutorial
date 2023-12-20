@@ -12,7 +12,10 @@ fn main() {
         let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("failed");
 
-        let guess: i32 = guess.trim().parse().expect("provide number");
+        let guess: i32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("to small"),
