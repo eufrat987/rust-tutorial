@@ -6,6 +6,9 @@ fn main() {
     // println!("{str1}");
 
     clone_example();
+
+    let str3 = String::from("alo");
+    takes_and_back_ownership(str3);
 }
 
 fn clone_example() {
@@ -13,4 +16,8 @@ fn clone_example() {
     let str2 = str1.clone();
 
     println!("{} {}", str1, str2);
+}
+
+fn takes_and_back_ownership(word: String) -> String {
+    word
 }
