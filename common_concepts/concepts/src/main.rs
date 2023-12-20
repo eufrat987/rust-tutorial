@@ -15,6 +15,8 @@ fn main() {
     shadow();
     data_types();
     tuple_example();
+    arrays();
+    expressions();
 }
 
 fn shadow() {
@@ -43,6 +45,14 @@ fn tuple_example() {
 }
 
 fn arrays() {
-    let aa = [1, 2, 3, 4];
-    let aaa = [3; 5];
+    let _aa = [1, 2, 3, 4];
+    let _aaa = [3; 5];
+}
+
+fn expressions() {
+    let x = {
+        let xx = 5;
+        xx + 3
+    };
+    println!("{x}");
 }
