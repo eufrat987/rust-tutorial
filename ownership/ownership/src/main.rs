@@ -14,6 +14,30 @@ fn main() {
     reference_example(str3);
     mut_reference();
     mut_reference2();
+    slice_example();
+}
+
+fn first_word(a: &str) -> &str {
+    let bytes = a.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &a[..i];
+        }
+    }
+
+    &a[..]
+}
+
+fn slice_example() {
+    let mut words = String::from("hello");
+
+    let word = first_word(&words[..]);
+
+    words.clear();
+
+    // cannot do - nice
+    // println!("{word}");
 }
 
 // cannot create
