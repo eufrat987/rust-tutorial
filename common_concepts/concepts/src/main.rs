@@ -17,6 +17,8 @@ fn main() {
     tuple_example();
     arrays();
     expressions();
+    let if_exp = ifexpr(3);
+    println!("{if_exp}");
 }
 
 fn shadow() {
@@ -55,4 +57,9 @@ fn expressions() {
         xx + 3
     };
     println!("{x}");
+}
+
+fn ifexpr(y: i32) -> i32 {
+    let x = if y > 2 { 5 } else { 6 };
+    x
 }
