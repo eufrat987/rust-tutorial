@@ -12,6 +12,17 @@ fn main() {
 
     let str3 = String::from("alo"); // new cannot use old, fn takes ownership of old
     reference_example(str3);
+    mut_reference();
+}
+
+fn mut_reference() {
+    let mut word = String::from("hello");
+    let word2 = &mut word;
+    // cannot use twice mutalbe reference
+    // let word3 = &mut word;
+
+    println!("{}", word2);
+    // println!("{}", word3);
 }
 
 fn clone_example() {
