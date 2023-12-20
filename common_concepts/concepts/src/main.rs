@@ -11,4 +11,16 @@ fn main() {
     println!("{x}");
     println!("{y}");
     println!("{SOME_CONST}");
+
+    shadow();
+}
+
+fn shadow() {
+    let x = 8;
+    {
+        let x = 6;
+        println!("{x}");
+    }
+
+    println!("{x}");
 }
