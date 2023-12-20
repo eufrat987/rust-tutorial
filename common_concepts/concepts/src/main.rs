@@ -19,6 +19,18 @@ fn main() {
     expressions();
     let if_exp = ifexpr(3);
     println!("{if_exp}");
+    loop_expr();
+}
+
+fn loop_expr() {
+    let mut counter = 2;
+    let xx = loop {
+        counter += 1;
+        if counter > 10 {
+            break counter;
+        }
+    };
+    println!("{xx}");
 }
 
 fn shadow() {
