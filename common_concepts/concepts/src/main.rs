@@ -20,6 +20,15 @@ fn main() {
     let if_exp = ifexpr(3);
     println!("{if_exp}");
     loop_expr();
+    loop_label();
+}
+
+fn loop_label() {
+    'outer_label: loop {
+        loop {
+            break 'outer_label;
+        }
+    }
 }
 
 fn loop_expr() {
