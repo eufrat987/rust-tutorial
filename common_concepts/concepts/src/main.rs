@@ -21,6 +21,14 @@ fn main() {
     println!("{if_exp}");
     loop_expr();
     loop_label();
+    for_example();
+}
+
+fn for_example() {
+    let test_arr = [1, 2, 3, 4];
+    for element in test_arr {
+        println!("element: {element}");
+    }
 }
 
 fn loop_label() {
