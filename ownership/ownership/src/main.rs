@@ -9,6 +9,9 @@ fn main() {
 
     let str3 = String::from("alo");
     takes_and_back_ownership(str3);
+
+    let str3 = String::from("alo"); // new cannot use old, fn takes ownership of old
+    reference_example(str3);
 }
 
 fn clone_example() {
@@ -21,3 +24,7 @@ fn clone_example() {
 fn takes_and_back_ownership(word: String) -> String {
     word
 }
+
+fn reference_example(word: String) -> usize {
+    word.len()
+} // do not free memory
