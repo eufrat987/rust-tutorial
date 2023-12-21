@@ -28,6 +28,14 @@ fn main() {
     println!("{}", user1.username);
 }
 
+fn structure_and_reference() {
+    // struct TestRef {
+    //     refere: &String,
+    // }
+    // println!("asd");
+    // missing lifetime specifier
+}
+
 fn new_user(username: String, email: String) -> User {
     User {
         active: true,
