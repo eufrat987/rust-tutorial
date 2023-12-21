@@ -13,5 +13,15 @@ fn main() {
 
     user1.username = String::from("username2");
 
+    let user2 = new_user(String::from("test"), String::from("test@email.test"));
+
     println!("{}", user1.username);
+}
+
+fn new_user(username: String, email: String) -> User {
+    User {
+        active: true,
+        username,
+        email,
+    }
 }
