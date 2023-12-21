@@ -4,6 +4,8 @@ struct User {
     email: String,
 }
 
+struct Color(i32, i32, i32);
+
 fn main() {
     let mut user1 = User {
         active: true,
@@ -19,6 +21,8 @@ fn main() {
         username: String::from("username3"),
         ..user2 // struct update syntax
     };
+
+    let black = Color(0, 0, 0);
 
     println!("{}", user1.username);
 }
