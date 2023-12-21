@@ -5,6 +5,7 @@ struct User {
 }
 
 struct Color(i32, i32, i32);
+struct UnitLike;
 
 fn main() {
     let mut user1 = User {
