@@ -15,6 +15,11 @@ fn main() {
 
     let user2 = new_user(String::from("test"), String::from("test@email.test"));
 
+    let user3 = User {
+        username: String::from("username3"),
+        ..user2 // struct update syntax
+    };
+
     println!("{}", user1.username);
 }
 
