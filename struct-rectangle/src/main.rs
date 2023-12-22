@@ -16,6 +16,13 @@ impl Rectangle {
     fn can_hold(&self, rect: &Rectangle) -> bool {
         rect.width <= self.width && rect.height <= self.height
     }
+
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
 }
 
 fn main() {
@@ -35,4 +42,6 @@ fn main() {
     // regular usage of function
     let rect2 = rect.example2();
     println!("Area of rectangle is {}", rect2.area());
+
+    let square = Rectangle::square(4);
 }
