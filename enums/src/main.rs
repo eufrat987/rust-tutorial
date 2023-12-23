@@ -16,10 +16,23 @@ impl Message {
     }
 }
 
+enum Currency {
+    PLN,
+    USD,
+}
+
 fn main() {
     let optional: Option<Message> = None;
     let ip = IpAddrKind::V4(192, 168, 0, 1);
     let msg1 = Message::Move { x: 23, y: 15 };
     msg1.call();
     println!("Hello, world!");
+    exchange(Currency::USD);
+}
+
+fn exchange(curr: Currency) -> f64 {
+    match curr {
+        Currency::PLN => 1.0,
+        Currency::USD => 5.3,
+    }
 }
