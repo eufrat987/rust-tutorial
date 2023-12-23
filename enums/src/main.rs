@@ -17,7 +17,7 @@ impl Message {
 }
 
 enum Currency {
-    PLN,
+    PLN(u8),
     USD,
 }
 
@@ -32,7 +32,10 @@ fn main() {
 
 fn exchange(curr: Currency) -> f64 {
     match curr {
-        Currency::PLN => 1.0,
+        Currency::PLN(year) => {
+            println!("year {}", year);
+            1.0
+        }
         Currency::USD => 5.3,
     }
 }
