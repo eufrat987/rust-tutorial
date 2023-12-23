@@ -30,6 +30,13 @@ fn main() {
     exchange(Currency::USD);
 }
 
+fn add_one(number: Option<i32>) -> Option<i32> {
+    match number {
+        Some(i) => Some(i + 1),
+        None => None,
+    }
+}
+
 fn exchange(curr: Currency) -> f64 {
     match curr {
         Currency::PLN(year) => {
