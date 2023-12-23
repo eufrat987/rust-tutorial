@@ -29,6 +29,13 @@ fn main() {
     println!("Hello, world!");
     exchange(Currency::USD);
     dice_match(9);
+    if_let_example(Some(7));
+}
+
+fn if_let_example(num: Option<i32>) {
+    if let Some(x) = num {
+        println!("{}", x);
+    }
 }
 
 fn dice_match(roll: u8) {
