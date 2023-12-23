@@ -17,6 +17,7 @@ impl Message {
 }
 
 fn main() {
+    let optional: Option<Message> = None;
     let ip = IpAddrKind::V4(192, 168, 0, 1);
     let msg1 = Message::Move { x: 23, y: 15 };
     msg1.call();
