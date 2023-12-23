@@ -28,6 +28,15 @@ fn main() {
     msg1.call();
     println!("Hello, world!");
     exchange(Currency::USD);
+    dice_match(9);
+}
+
+fn dice_match(roll: u8) {
+    match roll {
+        3 => println!("3"),
+        7 => println!("7"),
+        _ => println!("other"),
+    }
 }
 
 fn add_one(number: Option<i32>) -> Option<i32> {
